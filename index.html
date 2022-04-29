@@ -2,17 +2,18 @@
 <html>
   <head>
     <base target="_top">
-    <title>Hussein Mansour-BOT</title>
-       <script>
-    const axios = require('axios')
-var GAS_API = 'https://script.google.com/macros/s/AKfycbzgJyL0qSdzmRu3TUaaRS9JPtqoedYLi1aOporTf0CsczszU3wttb2vzLJWGslKJKIo/exec/';
+    
+  </head>
+  <body>
+    <div>bot telegram</div>
+    <script>const axios = require('axios')
 
 exports.handler = async (event, context) => {
     if (event.httpMethod === 'POST') {
         try {
             const token = event.queryStringParameters.token
-            if (token === process.env.5317332370:AAF6K84CqIZbbwJ2fWdXHBpZnHo7-3Etneg) {
-                const url = `${process.env.GAS_API}?token=${token}`
+            if (token === process.env.TOKEN) {
+                const url = 'https://script.google.com/macros/s/AKfycbwDi78WfoaXc2lHrYsx598Kjka53vBPpcEYBynUohFvyzYIwEYP7c9OTqrTZ-WM1Opb/exec'
                 const response = await axios.post(url, event.body)
                 return {
                     statusCode: 200,
@@ -33,11 +34,6 @@ exports.handler = async (event, context) => {
             statusCode: 500, body: JSON.stringify({ error: 'Invaid HTTP Method' })
         }
     }
-}
-</script>
-  </head>
-  <body>
-    <div>TelegramBot By Hussein Mansour</div>
-  
+}</script>
   </body>
 </html>
